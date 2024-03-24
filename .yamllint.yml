@@ -1,0 +1,17 @@
+---
+
+extends: default
+
+ignore: |
+  node_modules/
+
+rules:
+  line-length:
+    ignore: |
+      /.github/workflows/*.yaml
+      /.github/workflows/*.yml
+      /.github/settings.yml
+  truthy:
+    ignore: |
+      /.github/workflows/*.yaml
+      /.github/workflows/*.yml
