@@ -1,9 +1,9 @@
 ---
 repository:
-  name: nestjs-service-template
-  description: Template for new services based on NestJS with the Best Practices and Ready for Production
-  homepage: github.com/AlbertHernandez/nestjs-service-template
-  topics: nodejs, template, typescript, nestjs-template, nestjs
+  name: nestjs-hexagonal-architecture-example
+  description: Example of how to create a NestJS service using hexagonal architecture
+  homepage: github.com/AlbertHernandez/nestjs-hexagonal-architecture-example
+  topics: nodejs, typescript, nestjs, hexagonal architecture
   has_wiki: false
   private: false
   has_issues: true

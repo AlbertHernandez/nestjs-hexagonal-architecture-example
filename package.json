@@ -1,21 +1,21 @@
 {
-  "name": "nestjs-service-template",
+  "name": "nestjs-hexagonal-architecture-example",
   "version": "1.0.0",
-  "description": "Template for new nestjs services",
+  "description": "Example of how to create a NestJS service using hexagonal architecture",
   "author": "alberthernandezdev@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlbertHernandez/nestjs-service-template/issues"
+    "url": "https://github.com/AlbertHernandez/nestjs-hexagonal-architecture-example/issues"
   },
-  "homepage": "https://github.com/AlbertHernandez/nestjs-service-template#readme",
+  "homepage": "https://github.com/AlbertHernandez/nestjs-hexagonal-architecture-example#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlbertHernandez/nestjs-service-template.git"
+    "url": "git+https://github.com/AlbertHernandez/nestjs-hexagonal-architecture-example.git"
   },
   "keywords": [
     "typescript",
     "nestjs",
-    "template"
+    "hexagonal architecture"
   ],
   "engines": {
     "node": ">=18.x",

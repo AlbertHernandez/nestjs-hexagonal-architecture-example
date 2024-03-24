@@ -2,14 +2,14 @@
   <a href="http://nestjs.com/" target="blank"><img src="images/nestjs.png" alt="Nest Logo" width="512" /></a>
 </p>
 
-<h1 align="center">⭐ NestJS Service Template ⭐</h1>
+<h1 align="center">NestJS Hexagonal Architecture Example</h1>
 
 <p align="center">
-  Template for new services based on NestJS with the Best Practices and Ready for Production
+  Example of how to create a NestJS service using hexagonal architecture.
 </p>
 
 <p align="center">
-  <a href="https://github.com/AlbertHernandez/nestjs-service-template/actions/workflows/node.yml?branch=main"><img src="https://github.com/AlbertHernandez/nestjs-service-template/actions/workflows/node.yml/badge.svg?branch=main" alt="nodejs"/></a>
+  <a href="https://github.com/AlbertHernandez/nestjs-hexagonal-architecture-example/actions/workflows/node.yml?branch=main"><img src="https://github.com/AlbertHernandez/nestjs-hexagonal-architecture-example/actions/workflows/node.yml/badge.svg?branch=main" alt="nodejs"/></a>
   <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/node-20.x-green.svg" alt="node"/></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-5.x-blue.svg" alt="typescript"/></a>
   <a href="https://docs.nestjs.com/v10/"><img src="https://img.shields.io/badge/npm-10.x-red.svg" alt="npm"/></a>
@@ -21,32 +21,13 @@
 
 ## 👀 Motivation
 
-When we start creating some new service based on NestJS most often we just use the Nest cli for starting a new service that already give us some convention and structure for our project. This is a good starting point however I was missing a couple of interesting things that almost all services should have to be ready to deploy to production like fully dockerized, ensuring coding conventions...
+The main idea of this project is to show how we can create a NestJS service using the hexagonal architecture. Note that this repository is not a template for starting new projects so we will not keep it up to date in terms of dependencies, vulnerabilities or new practices, if you are looking for a new template we recommend you to check the [project templates](#-project-templates) section.
 
-For this reason I created this custom template for new services based on this framework, with everything I would like to have to start developing a service with the best practices but with a simple file structure so later developers can change to implement their logic.
+## 🤩 Project templates
 
-Here we are not providing any specific architecture like hexagonal architecture or others, this is like a simple template where later we can customize and create the architecture we need.
+Are you thinking in start new projects in nestjs, other frameworks or create a super fancy library? I recommend you to check the following templates I have been working on:
 
-## 🌟 What is including this template?
-
-1. 🐳 Fully dockerized service ready for development and production environments with the best practices for docker, trying to provide a performance and small image just with the code we really need in your environments.
-2. 👷 Use [SWC](https://swc.rs/) for compiling and running the tests of the service. As commented in the own [NestJS docs](https://docs.nestjs.com/recipes/swc), this is approximately x20 times faster than default typescript compiler that is the one that comes by default in NestJS.
-3. ⚡️ Use [Fastify](https://fastify.dev/) as Web Framework. By default, [NestJS is using Express](https://docs.nestjs.com/techniques/performance) because is the most widely-used framework for working with NodeJS, however, this does not imply is the one is going to give us the most performance. Also, NestJS is fully compatible with Fastify, so we are providing this integration by default. You can check [here](https://github.com/fastify/benchmarks#benchmarks) comparison between different web frameworks.
-4. 🐶 Integration with [husky](https://typicode.github.io/husky/) to ensure we have good quality and conventions while we are developing like:
-   - 💅 Running the linter over the files that have been changed
-   - 💬 Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to ensure our commits have a convention.
-   - ✅ Run the tests automatically.
-   - ⚙️ Check our project does not have type errors with Typescript.
-5. 🗂️ Separate tests over production code. By default, NestJS is combining in the same folder, the `src`, the unit tests and the code we are developing for production. This is something I personally don't like so here I am separating this and having a dedicated folder for the unit tests.
-6. 🧪 Testing with [Vitest](https://vitest.dev/) and [supertest](https://github.com/ladjs/supertest) for unit and e2e tests.
-7. 🤜🤛 Combine unit and e2e test coverage. In the services we may have both type of tests, unit and e2e tests, and usually we would like to see what is the combined test coverage, so we can see the full picture.
-8. 📌 Custom path aliases, where you can define your own paths (you will be able to use imports like `@core/logger` instead of `../../../src/core/logger`).
-9. 🚀 CI/CD using GitHub Actions, helping ensure a good quality of our code and providing useful insights about dependencies, security vulnerabilities and others.
-
-## 🤩 Other templates
-
-Are you thinking in start new projects in other frameworks or create a super fancy library? If you like this template there are others base on this you can check:
-
+- [Template for new NestJS Services](https://github.com/AlbertHernandez/nestjs-service-template)
 - [Template for new Typescript Libraries](https://github.com/AlbertHernandez/typescript-library-template)
 - [Template for new Typescript Express Services](https://github.com/AlbertHernandez/express-typescript-service-template)
 - [Template for new GitHub Actions based on NodeJS](https://github.com/AlbertHernandez/github-action-nodejs-template)
