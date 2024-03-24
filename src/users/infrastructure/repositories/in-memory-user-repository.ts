@@ -5,14 +5,26 @@ import { Injectable } from "@shared/domain/dependency-injection";
 
 @Injectable()
 export class InMemoryUserRepository implements UserRepository {
-  private users: User[] = [
-    new User("1", "albert", "albert@gmail.com"),
-    new User("2", "juan", "juan@gmail.com"),
-    new User("3", "pepe", "pepe@gmail.com"),
-  ];
+  private userIdToUserMap: Map<string, User>;
+
+  constructor() {
+    this.userIdToUserMap = new Map();
+    const users: User[] = [
+      new User("1", "albert", "albert@gmail.com"),
+      new User("2", "juan", "juan@gmail.com"),
+      new User("3", "pepe", "pepe@gmail.com"),
+    ];
+    for (const user of users) {
+      this.userIdToUserMap.set(user.id, user);
+    }
+  }
+
+  create(user: User): Promise<void> {
+    this.userIdToUserMap.set(user.id, user);
+    return Promise.resolve();
+  }
 
   findById(id: string): Promise<User | null> {
-    const user = this.users.find(user => user.id === id);
-    return Promise.resolve(user || null);
+    return Promise.resolve(this.userIdToUserMap.get(id) || null);
   }
 }
