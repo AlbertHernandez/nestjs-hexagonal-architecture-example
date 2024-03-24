@@ -25,7 +25,7 @@
   "scripts": {
     "build": "npm run build:clean && nest build --path tsconfig.prod.json",
     "start": "node dist/main.js",
-    "dev": "tsnd -r tsconfig-paths/register --inspect=0.0.0.0:9229 --respawn src/main.ts",
+    "dev": "tsnd -r tsconfig-paths/register --inspect=0.0.0.0:9229 --respawn src/main.ts | pino-pretty --messageKey message",
     "test": "rimraf coverage .nyc_output && concurrently 'npm:test:unit' 'npm:test:e2e' && npm run calculate-global-test-coverage",
     "test:unit": "vitest run --coverage --config vitest.config.unit.ts",
     "test:e2e": "vitest run --coverage --config ./vitest.config.e2e.ts",
@@ -42,6 +42,7 @@
     "@nestjs/core": "^10.3.4",
     "@nestjs/platform-fastify": "^10.3.4",
     "fastify": "^4.26.2",
+    "pino": "^8.19.0",
     "reflect-metadata": "^0.2.1",
     "rxjs": "^7.8.1",
     "uuid": "^9.0.1"
@@ -74,6 +75,7 @@
     "lint-staged": "^15.2.2",
     "nock": "^13.5.4",
     "nyc": "^15.1.0",
+    "pino-pretty": "^11.0.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "source-map-support": "^0.5.21",

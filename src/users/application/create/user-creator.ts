@@ -14,14 +14,14 @@ export class UserCreator {
   ) {}
 
   async run(createUserDto: CreateUserDto) {
-    this.logger.debug("Creating user");
+    this.logger.info("Creating user");
     const user = new User(
       createUserDto.id,
       createUserDto.name,
       createUserDto.email,
     );
     await this.userRepository.create(user);
-    this.logger.debug("User created successfully", {
+    this.logger.info("User created successfully", {
       attributes: { id: user.id },
     });
     return user;

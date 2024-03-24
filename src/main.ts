@@ -6,6 +6,7 @@ import {
 } from "@nestjs/platform-fastify";
 
 import { Logger } from "@shared/logger/domain";
+import { NestLoggerService } from "@shared/logger/infrastructure/nestjs-logger-service";
 
 import { AppModule } from "./app.module";
 
@@ -13,7 +14,9 @@ async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter(),
+    { bufferLogs: true },
   );
+  app.useLogger(app.get(NestLoggerService));
 
   const configService = app.get(ConfigService);
   const port = configService.get<string>("PORT", "3000");
