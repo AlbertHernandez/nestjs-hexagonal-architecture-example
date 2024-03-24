@@ -12,8 +12,7 @@ export class FindUserController {
   @Get(":id")
   async run(@Param("id") id: string) {
     try {
-      const user = await this.userByIdFinder.run(id);
-      return { data: user };
+      return await this.userByIdFinder.run(id);
     } catch (error) {
       if (error instanceof UserNotFoundException) {
         throw new NotFoundException(error.message);
