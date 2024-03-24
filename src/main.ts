@@ -6,7 +6,11 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 
+import { ErrorResponseNormalizerFilter } from "@src/api-gateway/response-normalizer/error-response-normalizer.filter";
+import { SuccessResponseNormalizerInterceptor } from "@src/api-gateway/response-normalizer/success-response-normalizer.interceptor";
+
 import { Logger } from "@shared/logger/domain";
+import { LoggerInterceptor } from "@shared/logger/infrastructure/logger.interceptor";
 import { NestLoggerService } from "@shared/logger/infrastructure/nestjs-logger-service";
 
 import { API } from "./api-gateway/routes/api-routes";
@@ -21,6 +25,11 @@ async function bootstrap() {
   app.useLogger(app.get(NestLoggerService));
   app.setGlobalPrefix(API);
 
+  app.useGlobalFilters(app.get(ErrorResponseNormalizerFilter));
+  app.useGlobalInterceptors(
+    app.get(LoggerInterceptor),
+    app.get(SuccessResponseNormalizerInterceptor),
+  );
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

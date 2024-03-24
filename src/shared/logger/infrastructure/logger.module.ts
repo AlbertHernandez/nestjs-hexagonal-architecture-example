@@ -3,6 +3,7 @@ import { ConfigService } from "@nestjs/config";
 
 import { Logger, LoggerLevel } from "@shared/logger/domain";
 
+import { LoggerInterceptor } from "./logger.interceptor";
 import { NestLoggerService } from "./nestjs-logger-service";
 import { PinoLogger, PinoLoggerDependencies } from "./pino-logger";
 
@@ -22,7 +23,7 @@ const loggerProvider: Provider = {
 
 @Global()
 @Module({
-  providers: [loggerProvider, NestLoggerService],
-  exports: [loggerProvider, NestLoggerService],
+  providers: [loggerProvider, NestLoggerService, LoggerInterceptor],
+  exports: [loggerProvider, NestLoggerService, LoggerInterceptor],
 })
 export class LoggerModule {}
