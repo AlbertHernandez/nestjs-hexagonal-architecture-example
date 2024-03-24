@@ -1,4 +1,3 @@
-import { Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
 import {
@@ -19,8 +18,8 @@ async function bootstrap() {
 
   await app.listen(port, "0.0.0.0");
 
-  const logger = app.get(Logger);
-  logger.log(`App is ready and listening on port ${port} 🚀`);
+  // eslint-disable-next-line no-console
+  console.log(`App is ready and listening on port ${port} 🚀`);
 }
 
 bootstrap().catch(handleError);
