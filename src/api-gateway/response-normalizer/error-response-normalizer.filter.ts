@@ -1,5 +1,6 @@
 import {
   ArgumentsHost,
+  BadRequestException,
   Catch,
   ExceptionFilter,
   HttpException,
@@ -25,6 +26,19 @@ export class ErrorResponseNormalizerFilter implements ExceptionFilter {
   }
 
   private mapToError(error: HttpException) {
-    return { message: error.message, status: error.getStatus() };
+    return {
+      message: error.message,
+      status: error.getStatus(),
+      reasons: this.getReasons(error),
+    };
+  }
+
+  private getReasons(error: HttpException): string[] | undefined {
+    if (!(error instanceof BadRequestException)) {
+      return;
+    }
+
+    const response = error.getResponse() as { message?: string[] };
+    return response?.message || [];
   }
 }

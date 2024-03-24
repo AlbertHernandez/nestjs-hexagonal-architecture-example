@@ -41,6 +41,8 @@
     "@nestjs/config": "^3.2.0",
     "@nestjs/core": "^10.3.4",
     "@nestjs/platform-fastify": "^10.3.4",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "fastify": "^4.26.2",
     "pino": "^8.19.0",
     "reflect-metadata": "^0.2.1",

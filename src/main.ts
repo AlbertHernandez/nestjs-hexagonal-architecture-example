@@ -1,3 +1,4 @@
+import { ValidationPipe } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
 import {
@@ -8,6 +9,7 @@ import {
 import { Logger } from "@shared/logger/domain";
 import { NestLoggerService } from "@shared/logger/infrastructure/nestjs-logger-service";
 
+import { API } from "./api-gateway/routes/api-routes";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
@@ -17,6 +19,15 @@ async function bootstrap() {
     { bufferLogs: true },
   );
   app.useLogger(app.get(NestLoggerService));
+  app.setGlobalPrefix(API);
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
+    }),
+  );
 
   const configService = app.get(ConfigService);
   const port = configService.get<string>("PORT", "3000");
