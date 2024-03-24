@@ -28,7 +28,8 @@
       { "ignores": ["modules"] }
     ],
     "node/no-unpublished-import": "off",
-    "no-process-exit": "off"
+    "no-process-exit": "off",
+    "unicorn/no-null": "off"
   },
   "overrides": [
     {
