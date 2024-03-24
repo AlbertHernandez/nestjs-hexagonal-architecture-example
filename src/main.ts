@@ -5,6 +5,8 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 
+import { Logger } from "@shared/logger/domain";
+
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
@@ -15,11 +17,11 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const port = configService.get<string>("PORT", "3000");
+  const logger = app.get(Logger);
 
   await app.listen(port, "0.0.0.0");
 
-  // eslint-disable-next-line no-console
-  console.log(`App is ready and listening on port ${port} 🚀`);
+  logger.info(`App is ready and listening on port ${port} 🚀`);
 }
 
 bootstrap().catch(handleError);
