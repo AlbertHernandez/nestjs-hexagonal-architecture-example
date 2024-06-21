@@ -1,6 +1,6 @@
 import pino from "pino";
 
-import { Injectable } from "@/shared/dependency-injection/domain/injectable";
+import { Injectable } from "@/shared/dependency-injection/injectable";
 import { Context, Logger, LoggerLevel, Message } from "@/shared/logger/domain";
 
 export interface PinoLoggerDependencies {
