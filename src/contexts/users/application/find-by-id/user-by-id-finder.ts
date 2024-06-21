@@ -1,8 +1,8 @@
-import { User } from "@src/users/domain/user";
-import { UserNotFoundException } from "@src/users/domain/user-not-found-exception";
-import { UserRepository } from "@src/users/domain/user-repository";
+import { User } from "@/users/domain/user";
+import { UserNotFoundException } from "@/users/domain/user-not-found-exception";
+import { UserRepository } from "@/users/domain/user-repository";
 
-import { Injectable } from "@shared/dependency-injection/domain/injectable";
+import { Injectable } from "@/shared/dependency-injection/domain/injectable";
 
 @Injectable()
 export class UserByIdFinder {

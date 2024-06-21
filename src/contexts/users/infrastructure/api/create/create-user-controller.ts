@@ -1,9 +1,9 @@
 import { Body, Controller, Post } from "@nestjs/common";
 import { v4 as uuidv4 } from "uuid";
 
-import { UserCreator } from "@src/users/application/create/user-creator";
+import { UserCreator } from "@/users/application/create/user-creator";
+import { USER_ROUTE } from "@/users/infrastructure/api/route";
 
-import { USER_ROUTE } from "../route";
 import { CreateUserHttpDto } from "./create-user-http-dto";
 
 @Controller(USER_ROUTE)

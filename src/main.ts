@@ -6,14 +6,14 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 
-import { ErrorResponseNormalizerFilter } from "@src/api-gateway/response-normalizer/error-response-normalizer.filter";
-import { SuccessResponseNormalizerInterceptor } from "@src/api-gateway/response-normalizer/success-response-normalizer.interceptor";
+import { ErrorResponseNormalizerFilter } from "@/api-gateway/response-normalizer/error-response-normalizer.filter";
+import { SuccessResponseNormalizerInterceptor } from "@/api-gateway/response-normalizer/success-response-normalizer.interceptor";
+import { API } from "@/api-gateway/routes/api-routes";
 
-import { Logger } from "@shared/logger/domain";
-import { LoggerInterceptor } from "@shared/logger/infrastructure/logger.interceptor";
-import { NestLoggerService } from "@shared/logger/infrastructure/nestjs-logger-service";
+import { Logger } from "@/shared/logger/domain";
+import { LoggerInterceptor } from "@/shared/logger/infrastructure/logger.interceptor";
+import { NestLoggerService } from "@/shared/logger/infrastructure/nestjs-logger-service";
 
-import { API } from "./api-gateway/routes/api-routes";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {

@@ -2,8 +2,8 @@ import { CallHandler, ExecutionContext, NestInterceptor } from "@nestjs/common";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { Observable, tap } from "rxjs";
 
-import { Injectable } from "@shared/dependency-injection/domain/injectable";
-import { Logger } from "@shared/logger/domain";
+import { Injectable } from "@/shared/dependency-injection/domain/injectable";
+import { Logger } from "@/shared/logger/domain";
 
 @Injectable()
 export class LoggerInterceptor implements NestInterceptor {

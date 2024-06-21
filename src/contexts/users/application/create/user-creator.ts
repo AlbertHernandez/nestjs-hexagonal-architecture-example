@@ -1,8 +1,8 @@
-import { User } from "@src/users/domain/user";
-import { UserRepository } from "@src/users/domain/user-repository";
+import { User } from "@/users/domain/user";
+import { UserRepository } from "@/users/domain/user-repository";
 
-import { Injectable } from "@shared/dependency-injection/domain/injectable";
-import { Logger } from "@shared/logger/domain";
+import { Injectable } from "@/shared/dependency-injection/domain/injectable";
+import { Logger } from "@/shared/logger/domain";
 
 import { CreateUserDto } from "./create-user-dto";
 

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access */
 import { LoggerService } from "@nestjs/common";
 
-import { Injectable } from "@shared/dependency-injection/domain/injectable";
-import { Logger, LoggerLevel } from "@shared/logger/domain";
+import { Injectable } from "@/shared/dependency-injection/domain/injectable";
+import { Logger, LoggerLevel } from "@/shared/logger/domain";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NestLoggerMessage = any;

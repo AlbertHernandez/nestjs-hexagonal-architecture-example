@@ -1,4 +1,4 @@
-import { User } from "@src/users/domain/user";
+import { User } from "./user";
 
 export abstract class UserRepository {
   abstract create(user: User): Promise<void>;

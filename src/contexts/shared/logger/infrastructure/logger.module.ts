@@ -1,7 +1,7 @@
 import { Global, Module, Provider } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 
-import { Logger, LoggerLevel } from "@shared/logger/domain";
+import { Logger, LoggerLevel } from "@/shared/logger/domain";
 
 import { LoggerInterceptor } from "./logger.interceptor";
 import { NestLoggerService } from "./nestjs-logger-service";

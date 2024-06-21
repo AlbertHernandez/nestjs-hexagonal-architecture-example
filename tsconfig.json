@@ -14,9 +14,12 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@src/*": ["src/*"],
-      "@shared/*": ["src/shared/*"],
-      "@tests/*": ["tests/*"]
+      "@/src/*": ["src/*"],
+      "@/api-gateway/*": ["src/api-gateway/*"],
+      "@/contexts/*": ["src/contexts/*"],
+      "@/users/*": ["src/contexts/users/*"],
+      "@/shared/*": ["src/contexts/shared/*"],
+      "@/tests/*": ["tests/*"]
     },
     "types": ["vitest/globals"]
   },
