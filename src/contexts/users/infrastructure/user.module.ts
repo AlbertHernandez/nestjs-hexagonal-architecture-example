@@ -18,5 +18,6 @@ import { InMemoryUserRepository } from "@/users/infrastructure/repositories/in-m
       useExisting: InMemoryUserRepository,
     },
   ],
+  exports: [CreateUserUseCase, FindUserByIdUseCase],
 })
 export class UserModule {}
