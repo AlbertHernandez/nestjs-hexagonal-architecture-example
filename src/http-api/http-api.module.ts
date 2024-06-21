@@ -6,4 +6,4 @@ import { ResponseNormalizerModule } from "./response-normalizer/response-normali
 @Module({
   imports: [HealthModule, ResponseNormalizerModule],
 })
-export class ApiGatewayModule {}
+export class HttpApiModule {}

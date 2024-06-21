@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 
-import { ApiGatewayModule } from "@/http-api/api-gateway.module";
+import { HttpApiModule } from "@/http-api/http-api.module";
 
 import { UserModule } from "@/users/infrastructure/user.module";
 
@@ -9,7 +9,7 @@ import { LoggerModule } from "@/shared/logger/infrastructure/logger.module";
 
 @Module({
   imports: [
-    ApiGatewayModule,
+    HttpApiModule,
     LoggerModule,
     ConfigModule.forRoot({ isGlobal: true, cache: true }),
     UserModule,
