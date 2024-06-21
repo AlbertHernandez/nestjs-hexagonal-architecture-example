@@ -1,10 +1,12 @@
 import { Controller, Get, NotFoundException, Param } from "@nestjs/common";
 
+import { V1 } from "@/http-api/routes/constants";
+
 import { FindUserByIdUseCase } from "@/users/application/find-user-by-id-use-case/find-user-by-id.use-case";
 import { UserNotFoundException } from "@/users/domain/user-not-found.exception";
 import { USER_ROUTE } from "@/users/infrastructure/http-api/route";
 
-@Controller(USER_ROUTE)
+@Controller(`${V1}/${USER_ROUTE}`)
 export class FindUserByIdController {
   constructor(private readonly userByIdFinder: FindUserByIdUseCase) {}
 
