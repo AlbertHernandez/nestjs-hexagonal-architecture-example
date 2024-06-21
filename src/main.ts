@@ -6,9 +6,9 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 
-import { ErrorResponseNormalizerFilter } from "@/api-gateway/response-normalizer/error-response-normalizer.filter";
-import { SuccessResponseNormalizerInterceptor } from "@/api-gateway/response-normalizer/success-response-normalizer.interceptor";
-import { API } from "@/api-gateway/routes/constants";
+import { ErrorResponseNormalizerFilter } from "@/http-api/response-normalizer/error-response-normalizer.filter";
+import { SuccessResponseNormalizerInterceptor } from "@/http-api/response-normalizer/success-response-normalizer.interceptor";
+import { API } from "@/http-api/routes/constants";
 
 import { Logger } from "@/shared/logger/domain";
 import { LoggerInterceptor } from "@/shared/logger/infrastructure/logger.interceptor";

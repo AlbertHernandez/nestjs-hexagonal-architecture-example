@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 
-import { ApiGatewayModule } from "@/api-gateway/api-gateway.module";
+import { ApiGatewayModule } from "@/http-api/api-gateway.module";
 
 import { UserModule } from "@/users/infrastructure/user.module";
 

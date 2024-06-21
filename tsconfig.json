@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@/src/*": ["src/*"],
-      "@/api-gateway/*": ["src/api-gateway/*"],
+      "@/http-api/*": ["src/http-api/*"],
       "@/contexts/*": ["src/contexts/*"],
       "@/users/*": ["src/contexts/users/*"],
       "@/shared/*": ["src/contexts/shared/*"],
