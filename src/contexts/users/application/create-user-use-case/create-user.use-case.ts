@@ -1,13 +1,13 @@
 import { User } from "@/users/domain/user";
-import { UserRepository } from "@/users/domain/user-repository";
+import { UserRepository } from "@/users/domain/user.repository";
 
 import { Injectable } from "@/shared/dependency-injection/domain/injectable";
 import { Logger } from "@/shared/logger/domain";
 
-import { CreateUserDto } from "./create-user-dto";
+import { CreateUserDto } from "./create-user.dto";
 
 @Injectable()
-export class UserCreator {
+export class CreateUserUseCase {
   constructor(
     private readonly logger: Logger,
     private readonly userRepository: UserRepository,

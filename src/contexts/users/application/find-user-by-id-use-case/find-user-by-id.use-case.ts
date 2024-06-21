@@ -1,11 +1,11 @@
 import { User } from "@/users/domain/user";
-import { UserNotFoundException } from "@/users/domain/user-not-found-exception";
-import { UserRepository } from "@/users/domain/user-repository";
+import { UserRepository } from "@/users/domain/user.repository";
+import { UserNotFoundException } from "@/users/domain/user-not-found.exception";
 
 import { Injectable } from "@/shared/dependency-injection/domain/injectable";
 
 @Injectable()
-export class UserByIdFinder {
+export class FindUserByIdUseCase {
   constructor(private readonly userRepository: UserRepository) {}
 
   async run(id: string): Promise<User> {

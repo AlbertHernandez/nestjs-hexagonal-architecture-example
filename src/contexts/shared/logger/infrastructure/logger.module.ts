@@ -4,8 +4,8 @@ import { ConfigService } from "@nestjs/config";
 import { Logger, LoggerLevel } from "@/shared/logger/domain";
 
 import { LoggerInterceptor } from "./logger.interceptor";
-import { NestLoggerService } from "./nestjs-logger-service";
-import { PinoLogger, PinoLoggerDependencies } from "./pino-logger";
+import { NestLoggerService } from "./nestjs.logger-service";
+import { PinoLogger, PinoLoggerDependencies } from "./pino.logger";
 
 const loggerProvider: Provider = {
   provide: Logger,

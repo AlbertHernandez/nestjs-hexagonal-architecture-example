@@ -1,14 +1,14 @@
 import { Body, Controller, Post } from "@nestjs/common";
 import { v4 as uuidv4 } from "uuid";
 
-import { UserCreator } from "@/users/application/create-user-use-case/user-creator";
+import { CreateUserUseCase } from "@/users/application/create-user-use-case/create-user.use-case";
 import { USER_ROUTE } from "@/users/infrastructure/api/route";
 
-import { CreateUserHttpDto } from "./create-user-http-dto";
+import { CreateUserHttpDto } from "./create-user.http-dto";
 
 @Controller(USER_ROUTE)
 export class CreateUserController {
-  constructor(private readonly userCreator: UserCreator) {}
+  constructor(private readonly userCreator: CreateUserUseCase) {}
 
   @Post()
   async run(@Body() body: CreateUserHttpDto) {

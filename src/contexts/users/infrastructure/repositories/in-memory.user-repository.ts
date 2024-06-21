@@ -1,5 +1,5 @@
 import { User } from "@/users/domain/user";
-import { UserRepository } from "@/users/domain/user-repository";
+import { UserRepository } from "@/users/domain/user.repository";
 
 import { Injectable } from "@/shared/dependency-injection/domain/injectable";
 

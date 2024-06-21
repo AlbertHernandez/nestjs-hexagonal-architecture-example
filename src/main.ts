@@ -8,11 +8,11 @@ import {
 
 import { ErrorResponseNormalizerFilter } from "@/api-gateway/response-normalizer/error-response-normalizer.filter";
 import { SuccessResponseNormalizerInterceptor } from "@/api-gateway/response-normalizer/success-response-normalizer.interceptor";
-import { API } from "@/api-gateway/routes/api-routes";
+import { API } from "@/api-gateway/routes/constants";
 
 import { Logger } from "@/shared/logger/domain";
 import { LoggerInterceptor } from "@/shared/logger/infrastructure/logger.interceptor";
-import { NestLoggerService } from "@/shared/logger/infrastructure/nestjs-logger-service";
+import { NestLoggerService } from "@/shared/logger/infrastructure/nestjs.logger-service";
 
 import { AppModule } from "./app.module";
 
