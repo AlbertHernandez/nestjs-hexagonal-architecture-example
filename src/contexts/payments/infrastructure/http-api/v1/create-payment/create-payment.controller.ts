@@ -7,7 +7,7 @@ import { CreatePaymentHttpDto } from "@/contexts/payments/infrastructure/http-ap
 
 @Controller(V1_PAYMENTS)
 export class CreatePaymentController {
-  constructor(private createPaymentUseCase: CreatePaymentUseCase) {}
+  constructor(private readonly createPaymentUseCase: CreatePaymentUseCase) {}
 
   @Post()
   async run(
