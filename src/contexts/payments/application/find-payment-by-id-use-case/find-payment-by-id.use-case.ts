@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 
 import { FindPaymentByIdDto } from "@/contexts/payments/application/find-payment-by-id-use-case/find-payment-by-id.dto";
-import { PrimitivePayment } from "@/contexts/payments/domain/payment";
+import { PrimitivePayment } from "@/contexts/payments/domain/payment.entity";
 import { PaymentRepository } from "@/contexts/payments/domain/payment.repository";
 import { PaymentNotFoundException } from "@/contexts/payments/domain/payment-not-found.exception";
 

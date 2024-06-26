@@ -1,7 +1,7 @@
 import { Controller, Get, NotFoundException, Param } from "@nestjs/common";
 
 import { FindPaymentByIdUseCase } from "@/contexts/payments/application/find-payment-by-id-use-case/find-payment-by-id.use-case";
-import { PrimitivePayment } from "@/contexts/payments/domain/payment";
+import { PrimitivePayment } from "@/contexts/payments/domain/payment.entity";
 import { PaymentNotFoundException } from "@/contexts/payments/domain/payment-not-found.exception";
 import { V1_PAYMENTS } from "@/contexts/payments/infrastructure/http-api/route.constants";
 import { FindPaymentByIdHttpDto } from "@/contexts/payments/infrastructure/http-api/v1/find-payment-by-id/find-payment-by-id.http-dto";

@@ -1,6 +1,9 @@
 import { Injectable } from "@/shared/dependency-injection/injectable";
 
-import { Payment, PrimitivePayment } from "@/contexts/payments/domain/payment";
+import {
+  Payment,
+  PrimitivePayment,
+} from "@/contexts/payments/domain/payment.entity";
 import { PaymentRepository } from "@/contexts/payments/domain/payment.repository";
 
 import { CreatePaymentDto } from "./create-payment.dto";
