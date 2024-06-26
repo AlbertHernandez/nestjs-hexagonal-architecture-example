@@ -12,7 +12,7 @@ import { CreatePaymentDto } from "./create-payment.dto";
 export class CreatePaymentUseCase {
   constructor(private readonly paymentRepository: PaymentRepository) {}
 
-  async execute(dto: CreatePaymentDto): Promise<{ payment: PrimitivePayment }> {
+  async run(dto: CreatePaymentDto): Promise<{ payment: PrimitivePayment }> {
     const payment = Payment.create(dto);
 
     await this.paymentRepository.create(payment);

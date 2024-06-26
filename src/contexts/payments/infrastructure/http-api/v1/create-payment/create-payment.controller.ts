@@ -13,7 +13,7 @@ export class CreatePaymentController {
   async run(
     @Body() createPaymentHttpDto: CreatePaymentHttpDto,
   ): Promise<{ payment: PrimitivePayment }> {
-    return await this.createPaymentUseCase.execute({
+    return await this.createPaymentUseCase.run({
       amount: createPaymentHttpDto.amount,
       customerId: createPaymentHttpDto.customerId,
     });

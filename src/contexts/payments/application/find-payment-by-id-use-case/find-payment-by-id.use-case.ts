@@ -9,7 +9,7 @@ import { PaymentNotFoundException } from "@/contexts/payments/domain/payment-not
 export class FindPaymentByIdUseCase {
   constructor(private readonly paymentRepository: PaymentRepository) {}
 
-  async execute(
+  async run(
     findPaymentByIdDto: FindPaymentByIdDto,
   ): Promise<{ payment: PrimitivePayment }> {
     const payment = await this.paymentRepository.getById(findPaymentByIdDto.id);

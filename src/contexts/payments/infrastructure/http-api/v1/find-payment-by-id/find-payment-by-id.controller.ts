@@ -17,7 +17,7 @@ export class FindPaymentByIdController {
     @Param() params: FindPaymentByIdHttpDto,
   ): Promise<{ payment: PrimitivePayment }> {
     try {
-      return await this.findPaymentByIdUseCase.execute({
+      return await this.findPaymentByIdUseCase.run({
         id: params.id,
       });
     } catch (error) {
