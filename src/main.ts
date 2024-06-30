@@ -14,7 +14,7 @@ import { Logger } from "@/shared/logger/domain";
 import { LoggerInterceptor } from "@/shared/logger/infrastructure/logger.interceptor";
 import { NestLoggerService } from "@/shared/logger/infrastructure/nestjs.logger-service";
 
-import { AppModule } from "./app.module";
+import { AppModule } from "./app/app.module";
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
