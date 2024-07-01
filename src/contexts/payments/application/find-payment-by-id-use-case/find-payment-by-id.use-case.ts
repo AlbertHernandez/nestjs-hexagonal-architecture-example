@@ -12,14 +12,16 @@ export class FindPaymentByIdUseCase {
   async run(
     findPaymentByIdDto: FindPaymentByIdDto,
   ): Promise<{ payment: PrimitivePayment }> {
-    const payment = await this.paymentRepository.getById(findPaymentByIdDto.id);
+    const payment = await this.paymentRepository.findById(
+      findPaymentByIdDto.id,
+    );
 
     if (!payment) {
       throw new PaymentNotFoundException(findPaymentByIdDto.id);
     }
 
     return {
-      payment: payment.toValue(),
+      payment: payment.toPrimitives(),
     };
   }
 }

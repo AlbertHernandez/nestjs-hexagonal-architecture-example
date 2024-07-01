@@ -15,10 +15,10 @@ export class CreatePaymentUseCase {
   async run(dto: CreatePaymentDto): Promise<{ payment: PrimitivePayment }> {
     const payment = Payment.create(dto);
 
-    await this.paymentRepository.create(payment);
+    await this.paymentRepository.save(payment);
 
     return {
-      payment: payment.toValue(),
+      payment: payment.toPrimitives(),
     };
   }
 }

@@ -20,7 +20,7 @@ export class Payment {
     });
   }
 
-  toValue(): PrimitivePayment {
+  toPrimitives(): PrimitivePayment {
     return {
       id: this.attributes.id,
       amount: this.attributes.amount,
